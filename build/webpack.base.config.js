@@ -43,7 +43,7 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.(css|styl)$/,
         use: isProd
           ? ExtractTextPlugin.extract({
               use: 'css-loader?minimize',
