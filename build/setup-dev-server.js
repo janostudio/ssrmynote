@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const MFS = require('memory-fs')
 const webpack = require('webpack')
+const opn = require('opn')
 // fs.watch
 const chokidar = require('chokidar')
 const clientConfig = require('./webpack.client.config')
@@ -63,6 +64,12 @@ module.exports = function setupDevServer (app, templatePath, cb) {
       'vue-ssr-client-manifest.json'
     ))
     update()
+  })
+
+  devMiddleware.waitUntilValid(() => {
+    console.log('> Listening at http://localhost:8080 \n')
+    // when env is testing, don't need open it
+    opn('http://localhost:8080')
   })
 
   // hot middleware
