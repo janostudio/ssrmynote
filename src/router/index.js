@@ -13,6 +13,7 @@ export function createRouter () {
     fallback: false,
     scrollBehavior: () => ({ y: 0 }),
     routes: [
+      { path: '/battle/:id', component: Battle },
       { path: '/home', component: Home },
       { path: '/', redirect: '/home' }
     ]

@@ -1,6 +1,6 @@
 # SSRMYNOTE
 
-*stylus* *flex* *rem*
+*stylus* *css-grid*
 *express* *vue-ssr*
 
 The project is aim to show my private note with server-side-render, and It will
