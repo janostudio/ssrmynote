@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <router-link to="/note">Note</router-link>
-    <br/>
-    <router-link to="/home">Home</router-link>
     <transition name="fade" mode="out-in">
       <router-view class="view"></router-view>
     </transition>

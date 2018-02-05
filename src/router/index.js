@@ -4,8 +4,8 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 // route-level code splitting
-const Note = () => import('../views/Note.vue')
-const Home = () => import('../views/Home.vue')
+const Home = () => import('../views/home/index.vue')
+const Battle = () => import('../views/battle/index.vue')
 
 export function createRouter () {
   return new Router({
@@ -13,9 +13,8 @@ export function createRouter () {
     fallback: false,
     scrollBehavior: () => ({ y: 0 }),
     routes: [
-      { path: '/note', component: Note },
       { path: '/home', component: Home },
-      { path: '/', redirect: '/note' }
+      { path: '/', redirect: '/home' }
     ]
   })
 }
